@@ -1,8 +1,14 @@
-# React + Vite
+# Here I built a website for the purpose of a industrial real estate business.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live firebase Link :
+Live surge Link :
 
-Currently, two official plugins are available:
+# Here goes some key features of my website 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+# The npm packages that are used for challenging part
+
+
+
+
+references  : https://preview.themeforest.net/item/realnest-real-estate-html-template/full_screen_preview/46085422?_ga=2.13384503.1897561907.1713154698-1729480525.1713154698
