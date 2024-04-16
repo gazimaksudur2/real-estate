@@ -1,6 +1,12 @@
+import { useContext } from "react"
 import { Link, NavLink } from "react-router-dom"
+import { AuthContext } from "../../AuthProvider/AuthProvider"
 
 const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
+  const handleLogout = ()=>{
+    logout();
+  }
   const navLinks = (
     <>
       <NavLink className={({ isActive }) => isActive ? 'text-[#D74B76da] -my-2 px-2 py-1 border-b-4 border-[#D74B76] font-semibold text-lg' : 'font-medium text-sm'} to={'/'}>Home</NavLink>
@@ -9,7 +15,7 @@ const Navbar = () => {
       <NavLink className={({ isActive }) => isActive ? 'text-[#D74B76da] -my-2 px-2 py-1 border-b-4 border-[#D74B76] font-semibold text-lg' : 'font-medium text-sm'} to={'/authenticate'}>Authenticate</NavLink>
     </>
   )
-
+  console.log('From nav bar ', user);
   return (
     <div className="w-[95%] mx-auto">
       <div className='navbar bg-[#FFAF45da] px-4 py-3 rounded-b-2xl'>
@@ -44,7 +50,8 @@ const Navbar = () => {
           <ul className='menu menu-horizontal px-1 items-center gap-8 font-exo'>{navLinks}</ul>
         </div>
         <div className='navbar-end'>
-          <Link to={'/authenticate'} className='btn bg-[#673F69ab] hover:bg-[#673F697a]  outline-none border-none'>LogIn</Link>
+          {!user && <Link to={'/authenticate'} className='btn bg-secondary hover:bg-[#673F697a]  outline-none border-none'>LogIn or SignUp</Link>}
+          {user && <Link to={'/'} onClick={()=>handleLogout()} className='btn bg-[#FFCDEA] hover:bg-[#673F697a]  outline-none border-none'>LogOut</Link>}
         </div>
       </div>
     </div>

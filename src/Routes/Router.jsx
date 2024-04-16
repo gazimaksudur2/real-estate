@@ -30,6 +30,7 @@ const router = createBrowserRouter([
     {
         path: '/authenticate',
         element: <Authentication/>,
+        errorElement: <NotFound/>,
         children: [
             {
                 path: '/authenticate',
