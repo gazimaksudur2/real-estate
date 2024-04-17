@@ -36,7 +36,7 @@ const UpdateProfile = () => {
     return (
         <div className="h-full w-full">
             <form
-                className="h-full w-[50%] mx-auto flex flex-col justify-center items-center card-body"
+                className="h-full lg:w-[50%] mx-auto flex flex-col justify-center items-center card-body"
                 onSubmit={handleSubmit(onSubmit)}
             >
                 <h2 className="font-ubuntu font-semibold text-xl text-[#1d2030]">

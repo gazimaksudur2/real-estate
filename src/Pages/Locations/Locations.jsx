@@ -16,7 +16,7 @@ const Locations = () => {
                 <title>Industria | Branches</title>
             </Helmet>
             <Heading/>
-            <div className='w-[70%] mx-auto mb-10 flex flex-col justify-center items-center gap-2'>
+            <div className='lg:w-[70%] w-[90%] mx-auto mb-3 lg:mb-10 flex flex-col justify-center items-center gap-2'>
                 <div className="collapse collapse-plus bg-base-200">
                     <input type="radio" name="my-accordion-3" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
