@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -10,13 +10,21 @@ const Register = () => {
     register,
     handleSubmit,
   } = useForm();
+  const navigate = useNavigate();
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser, setUser, updateUser } = useContext(AuthContext);
 
   const onSubmit = (data) => {
     // console.log(data);
-    createUser(data.name, data.email, data.password, data.url)
-    .then(user=>console.log(user))
+    createUser(data.email, data.password)
+    .then(user=>{
+      user.displayName = data.name;
+      user.photoURL = data.url;
+      console.log(user);
+      setUser(user)
+      updateUser(data.name, data.url);
+      navigate('/');
+    })
     .catch(error=>console.log(error.message))
   }
 

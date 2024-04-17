@@ -6,6 +6,10 @@ import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import Authentication from '../Pages/Authentication/Authentication';
 import NotFound from '../Pages/NotFound/NotFound';
+import Profile from '../Pages/Profile/Profile';
+import ViewProfile from '../Pages/ViewProfile/ViewProfile';
+import UpdateProfile from '../Pages/UpdateProfile/UpdateProfile';
+import Locations from '../Pages/Locations/Locations';
 
 const router = createBrowserRouter([
     {
@@ -22,8 +26,8 @@ const router = createBrowserRouter([
                 element: <Facilities/>,
             },
             {
-                path:'/login',
-                element: <Login/>,
+                path:'/location',
+                element: <Locations/>,
             }
         ]
     },
@@ -39,6 +43,21 @@ const router = createBrowserRouter([
             {
                 path:'/authenticate/register',
                 element: <Register/>,
+            }
+        ]
+    },
+    {
+        path: '/profile',
+        element: <Profile/>,
+        errorElement: <NotFound/>,
+        children: [
+            {
+                path: '/profile',
+                element: <ViewProfile/>
+            },
+            {
+                path: '/profile/update',
+                element: <UpdateProfile/>
             }
         ]
     }

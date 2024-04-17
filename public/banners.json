@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Villa",
+      "status": "For Sale",
+      "rating": 4.7,
+      "image": "https://img.freepik.com/free-photo/factory-workshop-interior-machines-glass-industry-background-process-production_645730-459.jpg?t=st=1713291543~exp=1713295143~hmac=1e6c555122393b1435f84421e354a7264130b4fbdb9ee53cf338715b87c7d76c&w=996",
+      "description": "Exquisite villa nestled in a prestigious gated community. Boasting panoramic views, opulent interiors, and resort-style amenities."
+    },
+    {
+      "id": 2,
+      "estate_title": "Beachfront Condo",
+      "status": "For Rent",
+      "rating": 4.5,
+      "image": "https://img.freepik.com/free-photo/two-warehouse-workers-walking-distribution-storage-area-discussing-about-logistics-organization_342744-1541.jpg?t=st=1713291501~exp=1713295101~hmac=cce76b62cd8f798b2e57821d7d1d0b98b55fb64a2ae410adc2ad78b52128aa6f&w=996",
+      "description": "Stylish beachfront condo offering unparalleled ocean views and modern luxury living. Perfect for a coastal retreat."
+    },
+    {
+      "id": 3,
+      "estate_title": "Mountain Retreat",
+      "status": "For Sale",
+      "rating": 4.8,
+      "image": "https://img.freepik.com/premium-photo/gas-turbine-electrical-power-plant-sunset_61243-839.jpg?w=996",
+      "description": "Secluded mountain retreat surrounded by pristine nature. Featuring rustic charm, outdoor activities, and serene ambiance."
+    },
+    {
+      "id": 4,
+      "estate_title": "Urban Loft",
+      "status": "For Rent",
+      "rating": 4.3,
+      "image": "https://img.freepik.com/free-photo/photovoltaics-solar-power-station-energy-from-natural_169016-5817.jpg?t=st=1713292172~exp=1713295772~hmac=5bec9f45125d063ac2ea823897c639929806f3b305f1a3f587480d8b0f3e0a09&w=996",
+      "description": "Chic urban loft in the heart of the city. Industrial-inspired design, vibrant neighborhood, and trendy cafes at your doorstep."
+    },
+    {
+      "id": 5,
+      "estate_title": "Suburban Home",
+      "status": "For Sale",
+      "rating": 4.6,
+      "image": "https://img.freepik.com/free-photo/hight-rise-condominium-office-buildings_1127-3044.jpg?t=st=1713291869~exp=1713295469~hmac=ce898d9191974d7c0f64acdfeea518b59ce63ed76db7ae967d1207b4146c4e15&w=996",
+      "description": "Spacious suburban home offering suburban tranquility and modern comfort. Perfect for growing families seeking a peaceful lifestyle."
+    },
+    {
+      "id": 6,
+      "estate_title": "Lakeview Cottage",
+      "status": "For Rent",
+      "rating": 4.9,
+      "image": "https://img.freepik.com/premium-photo/equipment-cables-piping-as-found-inside-modern-industrial-power-plant-view-from-central_820340-29497.jpg?w=826",
+      "description": "Quaint lakeview cottage with picturesque surroundings. Ideal for weekend getaways, fishing trips, and relaxation by the water."
+    },
+    {
+      "id": 7,
+      "estate_title": "City Apartment",
+      "status": "For Sale",
+      "rating": 4.4,
+      "image": "https://img.freepik.com/free-photo/view-large-oil-refinery_1385-363.jpg?t=st=1713291916~exp=1713295516~hmac=2ccd4ae15d4d3db046801e654adbda9a074c1fa0e6b6cb5479270bb4c4d8db83&w=900",
+      "description": "Sleek city apartment offering urban convenience and modern amenities. Walking distance to shopping, dining, and entertainment."
+    },
+    {
+      "id": 8,
+      "estate_title": "Golf Course Estate",
+      "status": "For Rent",
+      "rating": 4.7,
+      "image": "https://img.freepik.com/premium-photo/gas-turbine-electrical-power-plant-sunset_61243-839.jpg?w=996",
+      "description": "Elegant estate overlooking lush fairways and greens. Golf course living with luxury amenities and serene natural surroundings."
+    },
+    {
+      "id": 9,
+      "estate_title": "Rural Farmhouse",
+      "status": "For Sale",
+      "rating": 4.5,
+      "image": "https://img.freepik.com/premium-photo/agro-silos-granary-elevator-winter-day-snowy-field-silos-agroprocessing-manufacturing-plant-processing-drying-cleaning-storage-agricultural-products-flour-cereals-grain_97694-16183.jpg?w=996",
+      "description": "Quintessential rural farmhouse surrounded by rolling hills and farmland. Authentic charm, peaceful setting, and endless possibilities."
+    },
+    {
+      "id": 10,
+      "estate_title": "Historic Mansion",
+      "status": "For Rent",
+      "rating": 4.6,
+      "image": "https://img.freepik.com/free-photo/modern-operational-plant-equipment-producing-fiberglass-with-rolls-rock-wool-glass-wool-background-heavy-industry-machinery-metalworking-workshop-concept_645730-484.jpg?t=st=1713291685~exp=1713295285~hmac=632989816027073aedd1575a2536a2e4d242ffbaf49f0291a84e60a9d2550a5e&w=996",
+      "description": "Grand historic mansion steeped in elegance and history. Perfect venue for special events, gatherings, and unforgettable experiences."
+    }
+  ]
+  
