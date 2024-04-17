@@ -34,11 +34,11 @@ const Banner = () => {
             >
                 {
                     data.map((slide, idx) => (<SwiperSlide key={idx}>
-                        <div className={'w-[90%] relative mx-auto pr-32 h-[75vh] rounded-3xl flex justify-between items-center'} >
+                        <div className={'w-[90%] relative mx-auto h-[75vh] rounded-3xl flex justify-evenly items-center gap-[30%]'} >
                             {/* <h2>{slide.image}</h2> */}
                             {/* bg-[url("' + slide.image + '")] */}
                             <img className='absolute -z-10 rounded-3xl' src={slide.image} alt="slide 1" />
-                            <div className='px-[5%] flex flex-col justify-center items-start h-full w-[40%] gap-6 text-start'>
+                            <div className='flex flex-col justify-center items-start p-6 rounded-3xl w-[40%] gap-6 text-start backdrop-blur-lg'>
                                 <h2 className='font-exo text-white font-bold text-5xl'>{slide.estate_title}</h2>
                                 <p className='font-roboto text-white font-normal text-lg'>{slide.description}</p>
                                 <button className='btn btn-accent'>Learn More</button>
@@ -69,3 +69,5 @@ const Banner = () => {
 };
 
 export default Banner;
+
+// firebase deploy is not working
