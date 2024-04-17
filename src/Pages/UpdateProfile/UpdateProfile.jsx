@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
 
@@ -10,17 +11,26 @@ const UpdateProfile = () => {
         handleSubmit,
     } = useForm();
     const navigate = useNavigate();
-    const { user, setUser, updateUser2 } = useContext(AuthContext);
+    const { user, setUser, updateUser } = useContext(AuthContext);
 
 
     const onSubmit = (data) => {
         // console.log(data);
-        user.displayName = data.name;
-        user.photoURL = data.url;
-        user.email = data.email;
+        // user.displayName = data.name;
+        // user.photoURL = data.url;
         setUser(user)
+        updateUser(data.name, data.url);
+        toast.success("profile successfully updated", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
         navigate('/');
-        updateUser2(data.name, data.email, data.url);
     }
 
     return (

@@ -85,9 +85,9 @@ const SingleCard = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="flex justify-center">
+                {/* <div className="flex justify-center">
                     <Link to={'/property'}><button className="btn btn-outline btn-secondary mt-10">Go Back Properties</button></Link>
-                </div>
+                </div> */}
             </div>
         </div>
     );

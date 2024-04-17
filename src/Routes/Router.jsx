@@ -28,15 +28,15 @@ const router = createBrowserRouter([
                 element: <Properties/>
             },
             {
+                path: '/property/:id',
+                element: <PrivateRoute><SingleCard/></PrivateRoute>,
+                loader: ()=> fetch('/estates.json'),
+            },
+            {
                 path:'/location',
                 element: <PrivateRoute><Locations/></PrivateRoute>,
             }
         ]
-    },
-    {
-        path: '/property/:id',
-        element: <PrivateRoute><SingleCard/></PrivateRoute>,
-        loader: ()=> fetch('/estates.json'),
     },
     {
         path: '/authenticate',

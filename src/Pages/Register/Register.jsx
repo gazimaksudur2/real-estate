@@ -1,11 +1,14 @@
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
+  // const [error, setError] = useState('');
+  const location = useLocation();
   const {
     register,
     handleSubmit,
@@ -15,7 +18,34 @@ const Register = () => {
   const { createUser, setUser, updateUser } = useContext(AuthContext);
 
   const onSubmit = (data) => {
-    // console.log(data);
+    // setError('');
+    // console.log(location);
+    const pass = data.password;
+    let error = '';
+    if(pass.length<6){
+      error = "Password length should atleast 6 characters.";
+    }
+    else if(!/[A-Z]/.test(pass)){
+      error = "Password should contain atleast a capital letter";
+    }
+    else if(!/[a-z]/.test(pass)){
+      error = "Password should contain atleast a small letter";
+    }
+    // console.log("here error is : ", error);
+    if(pass.length<6||(!/[A-Z]/.test(pass))||(!/[a-z]/.test(pass))){
+      toast.error(error, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+      return;
+    }
+
     createUser(data.email, data.password)
     .then(user=>{
       user.displayName = data.name;
@@ -23,9 +53,23 @@ const Register = () => {
       console.log(user);
       setUser(user)
       updateUser(data.name, data.url);
-      navigate('/');
+      toast("User Created Succesfully");
+      location?.state?navigate(location.state):navigate('/');
+      // navigate('/');
     })
-    .catch(error=>console.log(error.message))
+    .catch(error=>{
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+      return;
+    })
   }
 
   // console.log(watch("example"));

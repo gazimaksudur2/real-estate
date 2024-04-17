@@ -1,12 +1,14 @@
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPass, setShowPass] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
   const {
     register,
     handleSubmit,
@@ -17,12 +19,34 @@ const Login = () => {
 
   const onSubmit = (data) => {
     // console.log(data)
+    // console.log(location);
     login(data.email, data.password)
     .then(user=>{
+      toast.success("successfully logged in", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
       console.log(user);
-      navigate('/');
+      navigate(location.state?location.state:'/');
     })
-    .catch(error=>console.log(error.message))
+    .catch(error=>{
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+    })
   }
 
   return (
