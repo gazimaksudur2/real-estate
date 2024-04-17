@@ -8,8 +8,10 @@
       "price_million_usd": 2.5,
       "status": "sale",
       "area": "5000 sq ft",
+      "price": 350000,
       "location": "City Industrial Park, Springfield",
-      "facilities": ["loading dock", "ample parking"]
+      "facilities": ["loading dock", "ample parking"],
+      "views": 103
     },
     {
       "id": "xyz789",
@@ -20,8 +22,10 @@
       "price_million_usd": 4.8,
       "status": "sale",
       "area": "10000 sq ft",
+      "price": 410000,
       "location": "Industrial Zone, Riverdale",
-      "facilities": ["heavy-duty machinery", "large assembly areas"]
+      "facilities": ["heavy-duty machinery", "large assembly areas"],
+      "views": 234
     },
     {
       "id": "def456",
@@ -32,8 +36,10 @@
       "price_million_usd": 7.2,
       "status": "rent",
       "area": "15000 sq ft",
+      "price": 750000,
       "location": "Manufacturing District, Oakville",
-      "facilities": ["clean room facilities", "quality control labs"]
+      "facilities": ["clean room facilities", "quality control labs"],
+      "views": 135
     },
     {
       "id": "ghi789",
@@ -44,8 +50,10 @@
       "price_million_usd": 15.0,
       "status": "sale",
       "area": "20000 sq ft",
+      "price": 850000,
       "location": "Commerce Park, Arlington",
-      "facilities": ["office spaces", "security services", "transportation access"]
+      "facilities": ["office spaces", "security services", "transportation access"],
+      "views": 923
     },
     {
       "id": "jkl012",
@@ -56,8 +64,10 @@
       "price_million_usd": 6.5,
       "status": "rent",
       "area": "8000 sq ft",
+      "price": 450000,
       "location": "Frosty Zone, Snowville",
-      "facilities": ["refrigeration units", "temperature monitoring"]
+      "facilities": ["refrigeration units", "temperature monitoring"],
+      "views": 562
     },
     {
       "id": "mno345",
@@ -68,8 +78,10 @@
       "price_million_usd": 50.0,
       "status": "sale",
       "area": "50000 sq ft",
+      "price": 400000,
       "location": "Energy District, Sunnydale",
-      "facilities": ["power generators", "renewable energy sources"]
+      "facilities": ["power generators", "renewable energy sources"],
+      "views": 155
     },
     {
         "id": "pqr123",
@@ -81,7 +93,8 @@
         "status": "rent",
         "area": "10000 sq ft",
         "location": "Frosty Zone, Snowville",
-        "facilities": ["temperature-controlled zones", "humidity control"]
+        "facilities": ["temperature-controlled zones", "humidity control"],
+        "views": 124
       },
       {
         "id": "stu456",
@@ -93,7 +106,8 @@
         "status": "sale",
         "area": "7000 sq ft",
         "location": "Commerce Hub, Lakeside",
-        "facilities": ["customizable storage", "loading docks"]
+        "facilities": ["customizable storage", "loading docks"],
+        "views": 109
       },
       {
         "id": "vwx789",
@@ -105,7 +119,8 @@
         "status": "sale",
         "area": "6000 sq ft",
         "location": "Manufacturing Zone, Hilltop",
-        "facilities": ["flexible layouts", "cost-effective solutions"]
+        "facilities": ["flexible layouts", "cost-effective solutions"],
+        "views": 134
       },
       {
         "id": "yza012",
@@ -117,7 +132,8 @@
         "status": "rent",
         "area": "18000 sq ft",
         "location": "Manufacturing Campus, Riverside",
-        "facilities": ["robotics technology", "assembly lines"]
+        "facilities": ["robotics technology", "assembly lines"],
+        "views": 153
       },
       {
         "id": "bcd345",
@@ -129,7 +145,8 @@
         "status": "sale",
         "area": "40000 sq ft",
         "location": "Technology Park, Woodland",
-        "facilities": ["dedicated zones", "shared amenities"]
+        "facilities": ["dedicated zones", "shared amenities"],
+        "views": 373
       },
       {
         "id": "efg678",
@@ -141,7 +158,8 @@
         "status": "sale",
         "area": "9000 sq ft",
         "location": "Tech Industrial Park, Summit",
-        "facilities": ["climate control systems", "inventory tracking"]
+        "facilities": ["climate control systems", "inventory tracking"],
+        "views": 634
       },
       {
         "id": "hij901",
@@ -153,7 +171,8 @@
         "status": "rent",
         "area": "14000 sq ft",
         "location": "Industrial Zone, Riverdale",
-        "facilities": ["specialized equipment", "research facilities"]
+        "facilities": ["specialized equipment", "research facilities"],
+        "views": 564
       },
       {
         "id": "klm234",
@@ -165,7 +184,8 @@
         "status": "sale",
         "area": "60000 sq ft",
         "location": "Green Energy Park, Oakwood",
-        "facilities": ["solar panels", "wind turbines", "smart grid technology"]
+        "facilities": ["solar panels", "wind turbines", "smart grid technology"],
+        "views": 456
       },
       {
         "id": "nop567",
@@ -177,7 +197,8 @@
         "status": "sale",
         "area": "35000 sq ft",
         "location": "Commerce District, Springfield",
-        "facilities": ["commercial spaces", "recreational amenities"]
+        "facilities": ["commercial spaces", "recreational amenities"],
+        "views": 622
       },
       {
         "id": "qrs890",
@@ -189,7 +210,8 @@
         "status": "rent",
         "area": "12000 sq ft",
         "location": "Pharma Park, Sunnydale",
-        "facilities": ["temperature monitoring", "humidity control"]
+        "facilities": ["temperature monitoring", "humidity control"],
+        "views": 126
       }
   ]
   

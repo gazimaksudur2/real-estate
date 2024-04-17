@@ -1,6 +1,5 @@
 import { createBrowserRouter }from 'react-router-dom'
 import MainLayout from '../Pages/MainLayout/MainLayout';
-import Facilities from '../Pages/Facilities/Facilities';
 import Home from '../Pages/Home/Home';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
@@ -11,6 +10,7 @@ import ViewProfile from '../Pages/ViewProfile/ViewProfile';
 import UpdateProfile from '../Pages/UpdateProfile/UpdateProfile';
 import Locations from '../Pages/Locations/Locations';
 import Properties from '../Pages/Properties/Properties';
+import SingleCard from '../Pages/SingleCard/SingleCard';
 
 const router = createBrowserRouter([
     {
@@ -23,18 +23,19 @@ const router = createBrowserRouter([
                 element: <Home/>,
             },
             {
-                path:'/properties',
+                path:'/property',
                 element: <Properties/>
-            },
-            {
-                path:'/facilities',
-                element: <Facilities/>,
             },
             {
                 path:'/location',
                 element: <Locations/>,
             }
         ]
+    },
+    {
+        path: '/property/:id',
+        element: <SingleCard/>,
+        loader: ()=> fetch('/estates.json'),
     },
     {
         path: '/authenticate',

@@ -1,33 +1,88 @@
-import ReactStars from "react-rating-stars-component";
+import { useEffect, useState } from "react";
+import { FaEye, FaStar } from "react-icons/fa";
+import { IoStarOutline } from "react-icons/io5";
+import { Link, useParams } from "react-router-dom";
 
 const SingleCard = () => {
+    const { id } = useParams();
+    const [wished, setWished] = useState(false);
+    const [card, setCard] = useState(null);
+
+    useEffect(()=>{
+        fetch('/estates.json')
+        .then(res => res.json())
+        .then(info => {
+            const data = info.find((card) => (card.id == id));
+            setCard(data);
+        });
+       
+    },[id])
+    // console.log(card);
+
+    const handleWished = () => {
+        setWished(!wished);
+    }
+    const { estate_title, image, description, price, status, area, location, facilities, views } = card || {};
     return (
-        <div>
-            <div className={'w-[90%] relative mx-auto h-[75vh] rounded-3xl flex justify-evenly items-center gap-[30%]'} >
-                {/* <h2>{slide.image}</h2> */}
-                {/* bg-[url("' + slide.image + '")] */}
-                <img className='absolute -z-10 rounded-3xl' src={slide.image} alt="slide 1" />
-                <div className='flex flex-col justify-center items-start p-6 rounded-3xl w-[40%] gap-6 text-start backdrop-blur-lg'>
-                    <h2 className='font-exo text-white font-bold text-5xl'>{slide.estate_title}</h2>
-                    <p className='font-roboto text-white font-normal text-lg'>{slide.description}</p>
-                    <button className='btn btn-accent'>Learn More</button>
+        <div className="w-[90%] mx-auto my-10">
+            <div className="w-full flex justify-between items-center mb-4">
+                <div className="flex flex-col space-y-2">
+                    <h1 className="font-exo font-bold text-4xl">{estate_title}</h1>
+                    <div className="flex justify-center items-center gap-2">
+                        <h3>For: {status}</h3>
+                        <h3 className="border-x-2 px-2 font-normal border-gray-400">Property ID: {id}</h3>
+                        <div className="flex justify-center items-center gap-2 ml-3">
+                            <FaEye size={20}/>
+                            {views}
+                        </div>
+                    </div>
                 </div>
-                <div className='w-[20%] rounded-2xl flex flex-col justify-center items-center backdrop-blur'>
-                    <h1 className='text-9xl font-exo text-white'>{slide.rating}</h1>
-                    <ReactStars
-                        edit={true}
-                        count={5}
-                        value={slide.rating}
-                        size={40}
-                        isHalf={true}
-                        emptyIcon={<i className="far fa-star"></i>}
-                        halfIcon={<i className="fa fa-star-half-alt"></i>}
-                        fullIcon={<i className="fa fa-star"></i>}
-                        activeColor="#ffd700"
-                    />,
+                <div className="space-y-4">
+                    <h2 className="font-exo font-semibold text-2xl">Price: {price}$</h2>
+                    <div className="flex justify-start items-center gap-2">
+                        <div onClick={handleWished}>
+                            {wished?<FaStar onClick={handleWished} className="text-amber-500" size={20}/>:<IoStarOutline onClick={handleWished} className="text-amber-500" size={20}/>}
+                        </div>
+                        <h4>Add to wishlist</h4>
+                    </div>
                 </div>
-                <div className='absolute bottom-10 p-6 h-20 left-[44%] bg-white border-b-4 rounded-3xl border-orange-500'>
-                    <h2 className='font-ubuntu font-medium'>Status: {slide.status}</h2>
+            </div>
+            <div>
+                <img className="w-full rounded-3xl h-[70vh] object-cover" src={image} alt="" />
+            </div>
+            <div className="flex flex-col justify-center">
+                <div className="my-5 space-y-3">
+                    <h2 className="font-ubuntu font-medium text-2xl">Description</h2>
+                    <p className="">{description}</p>
+
+                </div>
+                <div className="flex w-full px-[5%] justify-between items-center">
+                    <div>
+                        <h2 className="font-ubuntu mb-2">Property Features : </h2>
+                        <ul className="list-disc px-3 text-sm space-y-1 flex flex-col">
+                            {
+                                facilities?.map((facility, idx) => <li key={idx}>{facility}</li>)
+                            }
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 className="mb-2 font-ubuntu">Property Details : </h2>
+                        <ul className="list-disc px-3 text-sm flex flex-col space-y-1">
+                            <li>
+                                <div>
+                                    <p>Area : {area}</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p>Location : {location}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="flex justify-center">
+                    <Link to={'/property'}><button className="btn btn-outline btn-secondary mt-10">Go Back Properties</button></Link>
                 </div>
             </div>
         </div>

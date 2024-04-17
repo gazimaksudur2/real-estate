@@ -10,7 +10,7 @@ const ReviewCards = () => {
         .then(datas=>setData(datas));
     },[])
 
-    console.log(data);
+    // console.log(data);
     return (
         <div className='w-[90%] mx-auto grid grid-cols-2 gap-8 mb-10'>
             {

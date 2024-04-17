@@ -1,4 +1,4 @@
-import Carts from '../../components/Carts/Carts';
+import Carts from '../../components/Cards/Cards';
 import Section from '../../components/Section/Section';
 
 const Properties = () => {

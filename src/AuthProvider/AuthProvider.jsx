@@ -28,13 +28,20 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    // useEffect(()=>{
-    //     const unSubscribe = onAuthStateChanged(auth, (user)=>{
-    //         console.log(user);
-    //         setUser(user);
-    //     });
-    //     return unSubscribe();
-    // },[]);
+    // useEffect(() => {
+    //     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    //         if (currentUser) {
+    //             setUser(currentUser)
+    //         }
+
+    //         setLoading(false)
+    //     })
+
+    //     return () => {
+    //         return unsubscribe()
+    //     };
+    // }, [])
+    
     useEffect(()=>{
         onAuthStateChanged(auth, (cur_User)=>{
             // console.log(cur_User);
