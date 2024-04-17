@@ -7,7 +7,7 @@ const ReviewCard = ({ data }) => {
         <div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="p-4">
-                    <div className='w-[80%] px-10 mb-3 flex justify-between items-center'>
+                    <div className='lg:w-[80%] px-10 mb-3 flex justify-between items-center'>
                         <div className="avatar relative">
                             <div className="w-16 rounded-full">
                                 <img className='w-12 avatar rounded-full h-12 object-cover' src={imageurl} alt="" />

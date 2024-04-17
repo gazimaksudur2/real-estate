@@ -78,7 +78,7 @@ const Register = () => {
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <div className="h-full">
       <form
-        className="h-full w-[75%] mx-auto flex flex-col justify-center items-center card-body"
+        className="h-full lg:w-[75%] mx-auto flex flex-col justify-center items-center card-body"
         onSubmit={handleSubmit(onSubmit)}
       >
         <h2 className="font-ubuntu font-semibold text-xl">

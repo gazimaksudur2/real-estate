@@ -12,7 +12,7 @@ const ReviewCards = () => {
 
     // console.log(data);
     return (
-        <div className='w-[90%] mx-auto grid grid-cols-2 gap-8 mb-10'>
+        <div className='w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10'>
             {
                 data && data.map((dat,idx)=>(<ReviewCard key={idx} data={dat}/>))
             }

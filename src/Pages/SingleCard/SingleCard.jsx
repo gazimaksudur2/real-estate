@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { FaEye, FaStar } from "react-icons/fa";
 import { IoStarOutline } from "react-icons/io5";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const SingleCard = () => {
     const { id } = useParams();
@@ -25,13 +25,13 @@ const SingleCard = () => {
     }
     const { estate_title, image, description, price, status, area, location, facilities, views } = card || {};
     return (
-        <div className="w-[90%] mx-auto my-10">
+        <div className="w-[95%] lg:w-[90%] mx-auto my-10">
             <Helmet>
                 <title>{`Industria | ${estate_title}`}</title>
             </Helmet>
-            <div className="w-full flex justify-between items-center mb-4">
+            <div className="w-full flex flex-col lg:flex-row gap-4 justify-center lg:justify-between items-center mb-4">
                 <div className="flex flex-col space-y-2">
-                    <h1 className="font-exo font-bold text-4xl">{estate_title}</h1>
+                    <h1 className="font-exo font-bold text-2xl text-center lg:text-start lg:text-4xl">{estate_title}</h1>
                     <div className="flex justify-center items-center gap-2">
                         <h3>For: {status}</h3>
                         <h3 className="border-x-2 px-2 font-normal border-gray-400">Property ID: {id}</h3>
@@ -41,7 +41,7 @@ const SingleCard = () => {
                         </div>
                     </div>
                 </div>
-                <div className="space-y-4">
+                <div className="lg:space-y-4">
                     <h2 className="font-exo font-semibold text-2xl">Price: {price}$</h2>
                     <div className="flex justify-start items-center gap-2">
                         <div onClick={handleWished}>
@@ -60,7 +60,7 @@ const SingleCard = () => {
                     <p className="">{description}</p>
 
                 </div>
-                <div className="flex w-full my-10 px-[5%] justify-between items-center">
+                <div className="flex flex-col lg:flex-row w-full lg:my-10 px-[5%] justify-between items-center gap-4">
                     <div className="border-2 p-4 rounded-2xl border-orange-500 shadow-xl">
                         <h2 className="font-ubuntu mb-2 border-b-4 pb-2">Property Features : </h2>
                         <ul className="list-disc px-3 text-sm space-y-1 flex flex-col">
