@@ -1,13 +1,13 @@
 import Banner from "../../components/Banner/Banner";
-import Carts from "../../components/Carts/Carts";
-import Section from "../../components/Section/Section";
+import Review from "../../components/Review/Review";
+import ReviewCards from "../../components/ReviewCards/ReviewCards";
 
 const Home = () => {
     return (
         <div className="flex-1 mt-3">
             <Banner/>
-            <Section/>
-            <Carts/>
+            <Review/>
+            <ReviewCards/>
         </div>
     );
 };

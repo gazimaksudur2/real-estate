@@ -23,7 +23,7 @@ const Banner = () => {
     // console.log(data);
 
     return (
-        <div className='my-16'>
+        <div className='my-10'>
             <Swiper
                 spaceBetween={30}
                 loop={true}
@@ -56,7 +56,7 @@ const Banner = () => {
                                     halfIcon={<i className="fa fa-star-half-alt"></i>}
                                     fullIcon={<i className="fa fa-star"></i>}
                                     activeColor="#ffd700"
-                                />,
+                                />
                             </div>
                             <div className='absolute bottom-10 p-6 h-20 left-[44%] bg-white border-b-4 rounded-3xl border-orange-500'>
                                 <h2 className='font-ubuntu font-medium'>Status: {slide.status}</h2>

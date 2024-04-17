@@ -10,6 +10,7 @@ import Profile from '../Pages/Profile/Profile';
 import ViewProfile from '../Pages/ViewProfile/ViewProfile';
 import UpdateProfile from '../Pages/UpdateProfile/UpdateProfile';
 import Locations from '../Pages/Locations/Locations';
+import Properties from '../Pages/Properties/Properties';
 
 const router = createBrowserRouter([
     {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element: <Home/>,
+            },
+            {
+                path:'/properties',
+                element: <Properties/>
             },
             {
                 path:'/facilities',

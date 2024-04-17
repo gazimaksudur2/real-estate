@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 
-const Card = ({data}) => {
-    const {id, estate_title, image, description, price, status, area, location, facilities} = data;
+const Card = ({ data }) => {
+    const { id, estate_title, image, description, price, status, area, location, facilities } = data;
     return (
         <div>
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -15,7 +16,9 @@ const Card = ({data}) => {
                         <p className="text-blue-500 font-semibold">${price}</p>
                     </div>
                 </div>
-                <button className='btn btn-outline btn-success'>View property</button>
+                <Link to={`/property/${id}`}>
+                    <button className='btn btn-outline btn-success'>View property</button>
+                </Link>
             </div>
         </div>
     );

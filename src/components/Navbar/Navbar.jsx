@@ -25,6 +25,16 @@ const Navbar = () => {
             ? 'text-[#D74B76da] -my-2 px-2 py-1 border-b-4 border-[#D74B76] font-semibold text-lg'
             : 'font-medium text-sm'
         }
+        to={'/properties'}
+      >
+        Properties
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? 'text-[#D74B76da] -my-2 px-2 py-1 border-b-4 border-[#D74B76] font-semibold text-lg'
+            : 'font-medium text-sm'
+        }
         to={'/facilities'}
       >
         Facilities
