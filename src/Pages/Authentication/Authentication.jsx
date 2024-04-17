@@ -1,20 +1,70 @@
 import { useContext } from "react"
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useNavigate } from "react-router-dom"
 import { AuthContext } from "../../AuthProvider/AuthProvider"
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Authentication = () => {
   const { googleLogin, githubLogin } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleGoogle = ()=>{
     googleLogin()
-    .then(res=>console.log(res))
-    .catch(error=>console.log(error.message))
+    .then(user=>{
+      toast.success("successfully logged in", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+      console.log(user);
+      navigate(location.state?location.state:'/');
+    })
+    .catch(error=>{
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+    })
   };
   const handleGithub = ()=>{
     githubLogin()
-    .then(res=>console.log(res))
-    .catch(error=>console.log(error.message))
+    .then(user=>{
+      toast.success("successfully logged in", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+      console.log(user);
+      navigate(location.state?location.state:'/');
+    })
+    .catch(error=>{
+      toast.error(error.message, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+    })
   };
   return (
     <div className='lg:h-screen flex justify-center items-center bg-gray-500 backdrop-blur-xl bg-bgAuth bg-cover bg-blend-multiply'>
