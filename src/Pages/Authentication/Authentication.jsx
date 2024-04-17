@@ -19,7 +19,7 @@ const Authentication = () => {
   return (
     <div className='lg:h-screen flex justify-center items-center bg-gray-500 backdrop-blur-xl bg-bgAuth bg-cover bg-blend-multiply'>
       <div className='hero p-4 lg:p-0 lg:w-[60%] lg:min-h-[80%] flex flex-col lg:flex-row items-stretch'>
-        <div className='lg:w-[40%] px-6 py-10 lg:py-0 text-white bg-[#1d2030] rounded-t-2xl lg:rounded-l-2xl flex flex-col justify-center items-center gap-3'>
+        <div className='lg:w-[40%] px-6 py-10 lg:py-0 text-white bg-[#1d2030] rounded-t-2xl lg:rounded-l-2xl lg:rounded-tr-none flex flex-col justify-center items-center gap-3'>
           <div className="flex justify-center items-center gap-3 mb-24">
             <img className="w-8" src="https://cdn-icons-png.flaticon.com/128/12287/12287293.png" alt="logo" />
             <h2 className="font-exo font-semibold text-3xl">Industria</h2>
@@ -33,7 +33,7 @@ const Authentication = () => {
             </Link>
           </div>
         </div>
-        <div className="bg-white lg:w-[60%] rounded-b-2xl lg:rounded-r-2xl">
+        <div className="bg-white lg:w-[60%] rounded-b-2xl lg:rounded-bl-none lg:rounded-r-2xl">
             <Outlet/>
         </div>
       </div>
