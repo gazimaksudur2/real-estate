@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaEye, FaStar } from "react-icons/fa";
 import { IoStarOutline } from "react-icons/io5";
 import { Link, useParams } from "react-router-dom";
@@ -25,6 +26,9 @@ const SingleCard = () => {
     const { estate_title, image, description, price, status, area, location, facilities, views } = card || {};
     return (
         <div className="w-[90%] mx-auto my-10">
+            <Helmet>
+                <title>{`Industria | ${estate_title}`}</title>
+            </Helmet>
             <div className="w-full flex justify-between items-center mb-4">
                 <div className="flex flex-col space-y-2">
                     <h1 className="font-exo font-bold text-4xl">{estate_title}</h1>
@@ -56,17 +60,17 @@ const SingleCard = () => {
                     <p className="">{description}</p>
 
                 </div>
-                <div className="flex w-full px-[5%] justify-between items-center">
-                    <div>
-                        <h2 className="font-ubuntu mb-2">Property Features : </h2>
+                <div className="flex w-full my-10 px-[5%] justify-between items-center">
+                    <div className="border-2 p-4 rounded-2xl border-orange-500 shadow-xl">
+                        <h2 className="font-ubuntu mb-2 border-b-4 pb-2">Property Features : </h2>
                         <ul className="list-disc px-3 text-sm space-y-1 flex flex-col">
                             {
                                 facilities?.map((facility, idx) => <li key={idx}>{facility}</li>)
                             }
                         </ul>
                     </div>
-                    <div>
-                        <h2 className="mb-2 font-ubuntu">Property Details : </h2>
+                    <div className="border-2 p-4 rounded-2xl border-orange-500 shadow-xl">
+                        <h2 className="mb-2 font-ubuntu border-b-4 pb-2">Property Details : </h2>
                         <ul className="list-disc px-3 text-sm flex flex-col space-y-1">
                             <li>
                                 <div>

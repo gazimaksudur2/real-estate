@@ -37,7 +37,7 @@ const Navbar = () => {
         }
         to={'/location'}
       >
-        Locations
+        Branches
       </NavLink>
     </>
   )

@@ -11,6 +11,7 @@ import UpdateProfile from '../Pages/UpdateProfile/UpdateProfile';
 import Locations from '../Pages/Locations/Locations';
 import Properties from '../Pages/Properties/Properties';
 import SingleCard from '../Pages/SingleCard/SingleCard';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -28,13 +29,13 @@ const router = createBrowserRouter([
             },
             {
                 path:'/location',
-                element: <Locations/>,
+                element: <PrivateRoute><Locations/></PrivateRoute>,
             }
         ]
     },
     {
         path: '/property/:id',
-        element: <SingleCard/>,
+        element: <PrivateRoute><SingleCard/></PrivateRoute>,
         loader: ()=> fetch('/estates.json'),
     },
     {
