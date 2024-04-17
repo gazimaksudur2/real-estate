@@ -51,6 +51,7 @@ const UpdateProfile = () => {
                     <input
                         type="email"
                         defaultValue={user.email}
+                        readOnly
                         {...register("email")}
                         className="input input-bordered text-[#1d2030]"
                         required

@@ -20,12 +20,13 @@ const Banner = () => {
             .then(info => setData(info));
     }, [])
 
-    console.log(data);
+    // console.log(data);
 
     return (
         <div className='my-16'>
             <Swiper
                 spaceBetween={30}
+                loop={true}
                 pagination={{
                     clickable: true,
                 }}

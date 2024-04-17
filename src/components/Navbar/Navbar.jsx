@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { AuthContext } from '../../AuthProvider/AuthProvider'
 
 const Navbar = () => {
-  const { user, logout} = useContext(AuthContext)
+  const { user, logout } = useContext(AuthContext)
   const handleLogout = () => {
     logout()
   }
@@ -43,42 +43,43 @@ const Navbar = () => {
   )
 
   const userProf = (user ? <>
-      <div className='dropdown dropdown-end'>
-            <div
-              tabIndex={0}
-              role='button'
-              className='btn btn-ghost btn-circle avatar'
-            >
-              <div className='w-10 rounded-full'>
-                <img
-                  alt='profile photo'
-                  src={user.photoURL}
-                />
-              </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className='mt-3 z-[1] p-2 shadow-2xl menu menu-sm dropdown-content bg-base-100 rounded-box w-52'
-            >
-              <li>
-                <h2>{user.displayName}</h2>
-              </li>
-              <li>
-                <Link to={'/profile'}>
-                  View Profile
-                </Link>
-              </li>
-              <li>
-                <Link to={'/profile/update'}>
-                  Update Profile
-                </Link>
-              </li>
-              <li className='mt-4'>
-                <Link to={'/'} onClick={() => handleLogout()} className='btn bg-[#FFCDEA] hover:bg-[#673F697a]  outline-none border-none'>LogOut</Link>
-              </li>
-            </ul>
-          </div>
-    </> : 
+    <div className='dropdown dropdown-end z-50'>
+      <div
+        tabIndex={0}
+        role='button'
+        className='avatar tooltip tooltip-bottom'
+        data-tip={user.displayName}
+      >
+        <div className='w-10 rounded-full'>
+          <img
+            alt='profile photo'
+            src={user.photoURL}
+          />
+        </div>
+      </div>
+      <ul
+        tabIndex={0}
+        className='mt-3 z-[1] p-2 shadow-2xl menu menu-sm dropdown-content bg-base-100 rounded-box w-52'
+      >
+        <li>
+          <h2>{user.displayName}</h2>
+        </li>
+        <li>
+          <Link to={'/profile'}>
+            View Profile
+          </Link>
+        </li>
+        <li>
+          <Link to={'/profile/update'}>
+            Update Profile
+          </Link>
+        </li>
+        <li className='mt-4'>
+          <Link to={'/'} onClick={() => handleLogout()} className='btn bg-[#FFCDEA] hover:bg-[#673F697a]  outline-none border-none'>LogOut</Link>
+        </li>
+      </ul>
+    </div>
+  </> :
     <Link to={'/authenticate'} className='btn bg-secondary hover:bg-[#673F697a] outline-none border-none'>LogIn or SignUp</Link>
   )
 
